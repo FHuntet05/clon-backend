@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: cosno-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: starter
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: TRON_API_KEY
+        sync: false
+      - key: BSC_RPC_URL
+        value: https://bsc-dataseed.binance.org/
+      - key: TRON_NETWORK
+        value: mainnet
+      - key: BSC_NETWORK
+        value: mainnet
+      - key: APP_ENV
+        value: production
+      - key: CORS_ORIGIN
+        sync: false
